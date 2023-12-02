@@ -16,7 +16,7 @@
             android:orientation="vertical"
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
-            android:paddingTop="180dp">
+            android:paddingTop="40dp">
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

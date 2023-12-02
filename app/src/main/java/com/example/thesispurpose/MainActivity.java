@@ -1,5 +1,5 @@
 package com.example.thesispurpose;
-
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -178,6 +178,16 @@ public class MainActivity extends AppCompatActivity {
                     container.addView(keyTextView);
                     container.addView(valueTextView);
 
+                    container.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // When a block is clicked, navigate to the DetailsActivity
+                            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                            intent.putExtra("selectedBlock", key); // Pass the selected block to the next screen
+                            startActivity(intent);
+                        }
+                    });
+
                     rowLayout.addView(container); // Add the container to the current rowLayout
                 }
             }
@@ -210,5 +220,4 @@ public class MainActivity extends AppCompatActivity {
                 return "";
         }
     }
-
 }
